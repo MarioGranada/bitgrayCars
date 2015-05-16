@@ -1,14 +1,7 @@
 /* App Module */
 
-var bitgrayApp = angular.module('bitgrayApp',['ngRoute','bitgrayControllers']);
+var bitgrayApp = angular.module('bitgrayApp',['ngRoute','angular.filter','ngMap','bitgrayControllers','bitgrayFilters']);
 
-// var phonecatApp = angular.module('phonecatApp', [
-//   'ngRoute',
-//   'phonecatAnimations',
-//   'phonecatControllers',
-//   'phonecatFilters',
-//   'phonecatServices'
-// ]);
 
 bitgrayApp.config(['$routeProvider', function($routeProvider){
   $routeProvider.
@@ -25,18 +18,9 @@ bitgrayApp.config(['$routeProvider', function($routeProvider){
     });
 }]);
 
-// phonecatApp.config(['$routeProvider',
-//   function($routeProvider) {
-//     $routeProvider.
-//       when('/phones', {
-//         templateUrl: 'partials/phone-list.html',
-//         controller: 'PhoneListCtrl'
-//       }).
-//       when('/phones/:phoneId', {
-//         templateUrl: 'partials/phone-detail.html',
-//         controller: 'PhoneDetailCtrl'
-//       }).
-//       otherwise({
-//         redirectTo: '/phones'
-//       });
-//   }]);
+bitgrayApp.directive("imageGallery",function(){
+    return {
+      restrict: 'E',
+      templateUrl: 'image-gallery.html'
+    };
+  });

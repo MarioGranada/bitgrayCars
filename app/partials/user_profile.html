@@ -1,3 +1,43 @@
 <div class="user_profile_container">
 	<h1>User Profile</h1>
+	<div class="user-info-container">
+		<div class="user-info-box">
+			<div class="user-id user-info-row"><label>ID: </label>{{randomUser.id}} </div>
+			<div class="user-name user-info-row"><label>Name: </label>{{randomUser.name}} </div>
+			<div class="user-username user-info-row"><label>Username: </label>{{randomUser.username}}</div>
+			<div class="user-email user-info-row"><label>Email: </label>{{randomUser.email}}</div>
+			<div class="user-phone user-info-row"><label>Phone: </label>{{randomUser.phone}}</div>
+			<div class="user-website user-info-row"><label>Website: </label><a class="user-website-link" href="{{'http://'+randomUser.website}}" target="_blank">{{randomUser.website}}</a></div>
+			<div class="user-info-address-box">
+				<div class="user-info-address-box-title">Address: </div>
+				<div class="user-street user-info-row"><label>Street: </label>{{randomUser.address.street}}</div>
+				<div class="user-suite user-info-row"><label>Suite: </label>{{randomUser.address.suite}}</div>
+				<div class="user-city user-info-row"><label>City: </label>{{randomUser.address.city}}</div>
+				<div class="user-zipcode user-info-row"><label>Zipcode: </label>{{randomUser.address.zipcode}}</div>
+			</div>
+			<div class="user-info-company-box">
+				<div class="user-info-company-box-title">Company: </div>
+				<div class="user-company-name user-info-row"><label>Name: </label>{{randomUser.company.name}} </div>
+				<div class="user-company-catchPhrase user-info-row"><label>Catch Phrase: </label>{{randomUser.company.catchPhrase}} </div>
+				<div class="user-company-bs user-info-row"><label>BS: </label>{{randomUser.company.bs}} </div>
+			</div>
+		</div>
+		<div class="user-info-map ng-scope" ng-show="existGeoItems" >
+			<div id="map" ng-cloak></div>
+		</div>
+		<div class="user-button-row">
+			<div class="user-button" ng-click="reloadRoute()">Reload User</div>
+			<div href="#" class="user-button" ng-click="alert('load images')">Load Images</div>
+		</div>
+
+	</div>
+	
+
+<!-- <ul ng-repeat="(key, value) in photos | groupBy: 'albumId'">
+  Group ID: {{ key }}
+  <li ng-repeat="photo in value">
+    photo: {{ photo.id }} 
+  </li>
+</ul> -->
+  
 </div>

@@ -1,0 +1,6 @@
+<ul ng-repeat="(key, value) in photos | groupBy: 'albumId'">
+  Group ID: {{ key }}
+  <li ng-repeat="photo in value">
+    photo: {{ photo.id }} 
+  </li>
+</ul>
