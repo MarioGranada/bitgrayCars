@@ -27,10 +27,12 @@
 		</div>
 		<div class="user-button-row">
 			<div class="user-button" ng-click="reloadRoute()">Reload User</div>
-			<div href="#" class="user-button" ng-click="alert('load images')">Load Images</div>
+			<div href="#" class="user-button" ng-click="loadImages()">Load Images</div>
 		</div>
 
 	</div>
+	
+	<image-gallery class="user-image-gallery"></image-gallery>
 	
 
 <!-- <ul ng-repeat="(key, value) in photos | groupBy: 'albumId'">

@@ -21,6 +21,6 @@ bitgrayApp.config(['$routeProvider', function($routeProvider){
 bitgrayApp.directive("imageGallery",function(){
     return {
       restrict: 'E',
-      templateUrl: 'image-gallery.html'
+      templateUrl: 'partials/image-gallery.html'
     };
   });

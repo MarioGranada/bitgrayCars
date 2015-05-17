@@ -45,13 +45,17 @@ bitgrayControllers.controller('UserProfileCtrl',['$scope','$http','$route','$loc
     error(function(data, status, headers, config) {
     $scope.userList="Ther was an error retrieving users data";
   });
-  // $http({method: 'GET', url:'http://jsonplaceholder.typicode.com/photos'}).
-  //   success(function(data, status, headers, config) {
-  //   $scope.photos=data;
-  // }).
-  //   error(function(data, status, headers, config) {
-  //   $scope.photos="Ther was an error retrieving photos data";
-  // });
+  $http({method: 'GET', url:'http://jsonplaceholder.typicode.com/photos'}).
+    success(function(data, status, headers, config) {
+    $scope.photos=data;
+    $scope.photos.forEach(function(photo){
+    photo.albumId= parseFloat(photo.albumId);
+    photo.id= parseFloat(photo.id);
+    });
+  }).
+    error(function(data, status, headers, config) {
+    $scope.photos="Ther was an error retrieving photos data";
+  });
   $scope.reloadRoute = function() {
    
    // $route.reload();
@@ -59,6 +63,9 @@ bitgrayControllers.controller('UserProfileCtrl',['$scope','$http','$route','$loc
    // of the map, one solution is to use location.reload();
    location.reload();
    // $location.reload()
+  }
+  $scope.loadImages=function(){
+    alert("here!");
   }
 
 }]);
