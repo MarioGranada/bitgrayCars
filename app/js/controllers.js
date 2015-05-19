@@ -66,6 +66,18 @@ bitgrayControllers.controller('UserProfileCtrl',['$scope','$http','$route','$loc
   }
   $scope.loadImages=function(){
     alert("here!");
+  //   $http({method: 'GET', url:'http://jsonplaceholder.typicode.com/photos'}).
+  //   success(function(data, status, headers, config) {
+  //   $scope.photos=data;
+  //   $scope.photos.forEach(function(photo){
+  //   photo.albumId= parseFloat(photo.albumId);
+  //   photo.id= parseFloat(photo.id);
+  //   $(".user_profile_container").append("<image-gallery class='user-image-gallery'></image-gallery> ")
+  //   });
+  // }).
+  //   error(function(data, status, headers, config) {
+  //   $scope.photos="Ther was an error retrieving photos data";
+  // });
   }
 
 }]);
@@ -75,7 +87,14 @@ bitgrayControllers.controller('UserLoginFormCtrl',['$scope', '$location' ,
   // $scope.username='Mario Granada';
   // $scope.userpassword="";
   $scope.validateLoginForm=function(){
+
     $location.path("/user_profile")
+  }
+  $scope.checkInvalidFields=function(){
+    //We don't want to prompt the user with and invalid field annotation, so we display it up 
+    //once he/she clicks this button
+    //Angular instantiates forms as invalid, this way 'ng-invalid-required' class is up from the begining
+    $(".ng-invalid-required").addClass("required-field")
   }
 }]);
 

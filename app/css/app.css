@@ -22,14 +22,15 @@ h2 {
 }
 .user_login_form_container{
   width: 400px;
-  height: 250px;
+  min-height: 250px;
   transform: translate(-50%, -50%);
   border: 1px solid #777; 
   padding: 25px;
   position: fixed;
   top: 50%;
   left: 50%;
-  background: rgba(255,255,255,0.5);
+  background: rgb(255,255,255);
+  opacity: 0.9;
   z-index: 10px;
 }
 .login-bitgray-logo{
@@ -43,7 +44,7 @@ h2 {
 .login-fieldset{
   float: left;
   width: 100%;
-  margin: 10px;
+  margin: 10px 0px;
 }
 .login-header{
   float: left;
@@ -72,4 +73,122 @@ h2 {
 }
 .view-container{
   padding: 0;
+}
+.login-button,.user-profile-button{
+  /*background: #60cae8;*/
+  background: rgba(96,202,232,1);
+  color: #FFF;
+  border: 1px solid #60cae8;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+.login-bitgray-logo{
+  opacity: 0.9;
+}
+.login-form-empty, .login-form-invalid{
+  color: #FF0000;
+  display: none;
+  font-weight: bold;
+  font-size: 14px;
+  float: left;
+  clear: both;
+}
+/*.ng-invalid-required + .login-form-empty, .ng-invalid-pattern ~ .login-form-invalid{
+  display: block;
+}*/
+.ng-invalid-pattern ~ .login-form-invalid{
+  display: block;
+}
+.required-field + .login-form-empty, .required-field ~ .login-form-invalid{
+  display: block;
+}
+.user_profile_container{
+  width: 1280px;
+  min-height: 550px;
+  margin: 25px auto;
+  padding: 20px;
+  background: #FFF;
+  display: table;
+}
+.welcome-user{
+  float: left;
+}
+.log-out-link{
+  float: right;
+}
+.user-info-container{
+  float: left;
+  width: 100%;
+}
+.user-info-box{
+  float: left;
+}
+.user-info-row,.user-info-address-box, .user-info-company-box,.user-profile-buttons-row{
+  float: left;
+  clear: both;
+}
+.user-info-address-box .user-info-row, .user-info-company-box .user-info-row{
+  margin-left: 25px;
+}
+.user-info-map{
+  float: right;
+}
+.user-profile-buttons-row{
+}
+.user-profile-button{
+  float: left;
+  margin-left: 25px;
+}
+.user-info-label{
+  margin-right: 15px;
+}
+.user-profile-body-container{
+  width: 100%;
+  height: 100%;
+  float: left;
+  background: #000;
+}
+.user-image-gallery{
+  float: left;
+  width: 100%;
+  background: #FFF;
+  margin-top: 25px;
+}
+.user-image-gallery .ng-scope{
+  float: left;
+  width: 100%;
+  padding: 0;
+}
+.image-box-container{
+  display: none;
+}
+.album-title-box{
+  float: left;
+  width: 100%;
+  font-size: 16px;
+  font-weight: bold;
+  height: 100px;
+  border: 1px solid #393939;
+  cursor: pointer;
+}
+.album-title, .album-arrow{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.album-title{
+  float: left;
+  margin-left: 25px;
+}
+.album-arrow{
+  float: right;
+  margin-right: 25px;
+  font-size: 28px;
+}
+.user-image-gallery .ng-scope li{
+  display: none;
+  list-style: none;
 }

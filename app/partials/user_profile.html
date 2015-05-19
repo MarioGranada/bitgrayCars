@@ -1,37 +1,40 @@
+<div class="user-profile-body-container">
 <div class="user_profile_container">
-	<h1>User Profile</h1>
+	<h1 class="welcome-user">Welcome {{randomUser.username}}!</h1>
+	<a href="#/user_login" class="log-out-link">Log Out</a>
 	<div class="user-info-container">
 		<div class="user-info-box">
-			<div class="user-id user-info-row"><label>ID: </label>{{randomUser.id}} </div>
-			<div class="user-name user-info-row"><label>Name: </label>{{randomUser.name}} </div>
-			<div class="user-username user-info-row"><label>Username: </label>{{randomUser.username}}</div>
-			<div class="user-email user-info-row"><label>Email: </label>{{randomUser.email}}</div>
-			<div class="user-phone user-info-row"><label>Phone: </label>{{randomUser.phone}}</div>
-			<div class="user-website user-info-row"><label>Website: </label><a class="user-website-link" href="{{'http://'+randomUser.website}}" target="_blank">{{randomUser.website}}</a></div>
+			<div class="user-id user-info-row"><label class="user-info-label">ID: </label>{{randomUser.id}} </div>
+			<div class="user-name user-info-row"><label class="user-info-label">Name: </label>{{randomUser.name}} </div>
+			<div class="user-username user-info-row"><label class="user-info-label">Username: </label>{{randomUser.username}}</div>
+			<div class="user-email user-info-row"><label class="user-info-label">Email: </label>{{randomUser.email}}</div>
+			<div class="user-phone user-info-row"><label class="user-info-label">Phone: </label>{{randomUser.phone}}</div>
+			<div class="user-website user-info-row"><label class="user-info-label">Website: </label><a class="user-website-link" href="{{'http://'+randomUser.website}}" target="_blank">{{randomUser.website}}</a></div>
 			<div class="user-info-address-box">
-				<div class="user-info-address-box-title">Address: </div>
-				<div class="user-street user-info-row"><label>Street: </label>{{randomUser.address.street}}</div>
-				<div class="user-suite user-info-row"><label>Suite: </label>{{randomUser.address.suite}}</div>
-				<div class="user-city user-info-row"><label>City: </label>{{randomUser.address.city}}</div>
-				<div class="user-zipcode user-info-row"><label>Zipcode: </label>{{randomUser.address.zipcode}}</div>
+				<div class="user-info-address-box-title"><label class="user-info-label">Address: </label></div>
+				<div class="user-street user-info-row"><label class="user-info-label">Street: </label>{{randomUser.address.street}}</div>
+				<div class="user-suite user-info-row"><label class="user-info-label">Suite: </label>{{randomUser.address.suite}}</div>
+				<div class="user-city user-info-row"><label class="user-info-label">City: </label>{{randomUser.address.city}}</div>
+				<div class="user-zipcode user-info-row"><label class="user-info-label">Zipcode: </label>{{randomUser.address.zipcode}}</div>
 			</div>
 			<div class="user-info-company-box">
-				<div class="user-info-company-box-title">Company: </div>
-				<div class="user-company-name user-info-row"><label>Name: </label>{{randomUser.company.name}} </div>
-				<div class="user-company-catchPhrase user-info-row"><label>Catch Phrase: </label>{{randomUser.company.catchPhrase}} </div>
-				<div class="user-company-bs user-info-row"><label>BS: </label>{{randomUser.company.bs}} </div>
+				<div class="user-info-company-box-title"><label class="user-info-label">Company: </label></div>
+				<div class="user-company-name user-info-row"><label class="user-info-label">Name: </label>{{randomUser.company.name}} </div>
+				<div class="user-company-catchPhrase user-info-row"><label class="user-info-label">Catch Phrase: </label>{{randomUser.company.catchPhrase}} </div>
+				<div class="user-company-bs user-info-row"><label class="user-info-label">BS: </label>{{randomUser.company.bs}} </div>
 			</div>
 		</div>
 		<div class="user-info-map ng-scope" ng-show="existGeoItems" >
 			<div id="map" ng-cloak></div>
 		</div>
-		<div class="user-button-row">
-			<div class="user-button" ng-click="reloadRoute()">Reload User</div>
-			<div href="#" class="user-button" ng-click="loadImages()">Load Images</div>
+		<div class="user-profile-buttons-row">
+			<div class="user-profile-button" ng-click="reloadRoute()">Reload User</div>
+			<div class="user-profile-button" ng-click="loadImages()">Load Images</div>
 		</div>
 
 	</div>
 	
 	<image-gallery class="user-image-gallery"></image-gallery>
   
+</div>
 </div>

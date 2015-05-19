@@ -1,6 +1,6 @@
-<ul ng-repeat="(key, value) in photos | groupBy: 'albumId' | toArray:true">
+<ul class="album-images" ng-repeat="(key, value) in photos | groupBy: 'albumId' | toArray:true">
   <div class="album-title-box"><div class="album-title">Album ID: {{ key }}</div><div class="album-arrow">&#x025BE;</div></div>
-  <li ng-repeat="photo in value">
+  <li class="image-box-container" ng-repeat="photo in value">
     photo: {{ photo.id }} 
     <div class="image-box">
     	<img class ng-src="{{photo.thumbnailUrl}}">
