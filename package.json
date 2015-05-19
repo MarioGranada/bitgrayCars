@@ -1,9 +1,9 @@
 {
   "version": "0.0.0",
   "private": true,
-  "name": "Bit-Gray-test-Mario-Granada",
+  "name": "angular-phonecat",
   "description": "This is a test for a Bit Gray job application as a Senior Front End Developer",
-  "repository": "https://github.com/MarioGranada/bitgraytest.git",
+  "repository": "https://github.com/angular/angular-phonecat",
   "license": "MIT",
   "devDependencies": {
     "karma": "^0.12.16",
