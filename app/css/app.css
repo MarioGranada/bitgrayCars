@@ -3,16 +3,14 @@ body {
   /*color: #777;*/
   color: #393939;
 }
-
-#map {
-    height:420px;
-    width:600px;
-}
 .infoWindowContent {
     font-size:  14px !important;
     border-top: 1px solid #ccc;
     padding-top: 10px;
 }
+  #map {
+    border: 1px solid #777;
+  }
 h1{
   cursor: default;
 }
@@ -108,7 +106,6 @@ h2 {
   display: block;
 }
 .user_profile_container{
-  width: 1280px;
   min-height: 550px;
   margin: 25px auto;
   padding: 20px;
@@ -120,6 +117,7 @@ h2 {
 }
 .user-details-title{
   font-weight: bold;
+  margin: 25px 0px 25px 25px;
 }
 .log-out-link{
   float: right;
@@ -130,18 +128,21 @@ h2 {
 }
 .user-info-box{
   float: left;
+  border: 1px solid #777;
+  margin-right: 25px;
 }
 .user-info-row,.user-info-address-box, .user-info-company-box,.user-profile-buttons-row{
   float: left;
   clear: both;
 }
-.user-info-address-box .user-info-row, .user-info-company-box .user-info-row{
+.user-info-address-box, .user-info-company-box,.user-info-row{
   margin-left: 25px;
 }
 .user-info-map{
   float: right;
 }
 .user-profile-buttons-row{
+  margin: 25px 0px;
 }
 .user-profile-button{
   margin-left: 25px;
@@ -208,10 +209,15 @@ h2 {
 }
 .album-images-shown{
   display: block;
+  padding: 0;
+  margin: 0;
 }
 .image-box{
   cursor: pointer;
   text-align: center;
+  border: 1px solid #777;
+  min-height: 335px;
+  padding: 10px;
 }
 .image-box-container{
   float: left;
@@ -219,9 +225,12 @@ h2 {
   list-style: none;
   width: 170px;
   padding: 0;
-  padding: 10px;
   margin: 15px;
-  min-height: 330px;
+  min-height: 335px;
+
+}
+.thumb-image{
+  border: 1px solid #777;
 }
 .image-id,.image-box,.thumb-image,.image-title{
   float: left;

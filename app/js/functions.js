@@ -19,7 +19,6 @@ function openImagePopup(element){
 }
 function closePopup(){
 	$(".popup-overlay").toggleClass("popup-overlay-open");
-	//This causes to other window which are closed to open up, in this case it is better to remove the 'open' class instead of toggling
 	$(".image-window-open").toggleClass("image-window-open");
 	return false;
 }

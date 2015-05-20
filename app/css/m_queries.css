@@ -34,12 +34,33 @@
 @media all and (min-width:768px ) and (max-width: 991px) { 
 	.user_login_form_container{
   		width: 400px;
+  		display: block;
 	}
+	.user_profile_container{
+		width: 768px;
+	}
+	#map {
+    height: 520px;
+    width: 768px;
+    float: left;
+    clear: left;
+    }
 }
 /* Medium devices (desktops, 992px and up) */
 @media all and (min-width:992px ) and (max-width: 1199px) { 
 	.user_login_form_container{
   		width: 400px;
+  		display: block;
+	}
+	.user_profile_container{
+		width: 992px;
+	}
+	#map {
+    height: 220px;
+    width: 494px;
+	}
+	.user-info-box{
+		width: 494px;
 	}
 }
 
@@ -47,5 +68,19 @@
 @media all and (min-width: 1200px) {
 	.user_login_form_container{
   		width: 400px;
+	}
+	.user_profile_container{
+		width: 1200px;
+	}
+	#map {
+    height: 420px;
+    width: 598px;
+	}
+	.user-info-box{
+		width: 537px;
+	}
+	.user-info-map{
+		height: 420px;
+		width: 598px;
 	}
 }

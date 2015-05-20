@@ -25,13 +25,13 @@
 				<div class="user-company-catchPhrase user-info-row"><label class="user-info-label">Catch Phrase: </label>{{randomUser.company.catchPhrase}} </div>
 				<div class="user-company-bs user-info-row"><label class="user-info-label">BS: </label>{{randomUser.company.bs}} </div>
 			</div>
+			<div class="user-profile-buttons-row">
+			<div class="user-profile-button" ng-click="reloadRoute()">Reload User</div>
+			<div class="user-profile-button" ng-click="loadImages()">Load Images</div>
+		</div>
 		</div>
 		<div class="user-info-map ng-scope" ng-show="existGeoItems" >
 			<div id="map" ng-cloak></div>
-		</div>
-		<div class="user-profile-buttons-row">
-			<div class="user-profile-button" ng-click="reloadRoute()">Reload User</div>
-			<div class="user-profile-button" ng-click="loadImages()">Load Images</div>
 		</div>
 
 	</div>
@@ -40,3 +40,9 @@
   
 </div>
 </div>
+<script type="text/javascript">
+$(document).ready(function(){
+	// resizeColorRows();
+	alert($(window).width())
+});
+</script>
