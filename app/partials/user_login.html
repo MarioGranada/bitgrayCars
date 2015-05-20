@@ -2,19 +2,19 @@
 	<h1 class="login-header">Sign in</h1>
 	<img class="login-bitgray-logo" ng-src="http://www.bitgray.co/images/logo-whitebig.png">
 	<form class="user-login-form" name="loginForm" ng-controller="UserLoginFormCtrl as userLogin"  ng-submit='loginForm.$valid && validateLoginForm()' novalidate>
-		<fieldset class="login-fieldset">
+		<fieldset class="login-fieldset row">
 			<label class="login-label">User</label>
 			<input class="login-input" type="text" ng-model="username" ng-pattern='/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/' required>
 			<div class="login-form-empty">Please fill in Email field</div>
 			<div class="login-form-invalid">Please fill in the Email field with a valid email like: example@bitgray.co</div>
 		</fieldset>
-		<fieldset class="login-fieldset">
+		<fieldset class="login-fieldset row">
 			<label class="login-label">Password</label>
 			<input class="login-input" type="password" ng-model="userpassword" required ng-minlength="8" ng-maxlength="20" ng-pattern="/^(?=.*[A-Z]).+$/">
 			<div class="login-form-empty">Please fill in Password field</div>
 			<div class="login-form-invalid">Password should contain at least 1 uppercase letter and be less than 20 characters long</div>
 		</fieldset>
-		<fieldset class="login-fieldset">
+		<fieldset class="login-fieldset row">
 			<button class="login-button" type="submit" ng-click="checkInvalidFields()">Log In</button>
 		</fieldset>
 	</form>
@@ -25,5 +25,6 @@
 <script type="text/javascript">
 $(document).ready(function(){
 	resizeColorRows();
+	// alert($(window).width())
 });
 </script>

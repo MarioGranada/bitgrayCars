@@ -1,0 +1,51 @@
+/* Extra small devices (Phones, up to 767px) */
+@media (max-width: 767px) {  
+	.user_login_form_container{
+		width: 100%;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+		left: 0;
+	}
+	.login-header{
+		display: none;
+	}
+	.login-button{
+		width: 100%;
+	}
+	.login-bitgray-logo{
+		float: none;
+		position: relative;
+		margin: auto;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+	.login-label{
+		clear: both;
+		width: 100%;
+		text-align: left;
+	}
+	.login-input{
+		width: 100%;
+	}
+
+}
+/* Small devices (Tablets, 768px and up) */
+@media all and (min-width:768px ) and (max-width: 991px) { 
+	.user_login_form_container{
+  		width: 400px;
+	}
+}
+/* Medium devices (desktops, 992px and up) */
+@media all and (min-width:992px ) and (max-width: 1199px) { 
+	.user_login_form_container{
+  		width: 400px;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media all and (min-width: 1200px) {
+	.user_login_form_container{
+  		width: 400px;
+	}
+}

@@ -22,8 +22,8 @@ h2 {
 }
 .user_login_form_container{
   width: 400px;
-  min-height: 250px;
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
   border: 1px solid #777; 
   padding: 25px;
   position: fixed;
@@ -32,6 +32,7 @@ h2 {
   background: rgb(255,255,255);
   opacity: 0.9;
   z-index: 10px;
+  display: table;
 }
 .login-bitgray-logo{
   width: 100px;
@@ -84,6 +85,7 @@ h2 {
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
+  float: left;
 }
 .login-bitgray-logo{
   opacity: 0.9;
@@ -142,7 +144,6 @@ h2 {
 .user-profile-buttons-row{
 }
 .user-profile-button{
-  float: left;
   margin-left: 25px;
 }
 .user-info-label{
