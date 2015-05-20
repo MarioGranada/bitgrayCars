@@ -18,9 +18,9 @@ bitgrayApp.config(['$routeProvider', function($routeProvider){
     });
 }]);
 
-bitgrayApp.directive("imageGallery",function(){
-    return {
-      restrict: 'E',
-      templateUrl: 'partials/image-gallery.html'
-    };
-  });
+// bitgrayApp.directive("imageGallery",function(){
+//     return {
+//       restrict: 'E',
+//       templateUrl: 'partials/image-gallery.html'
+//     };
+//   });

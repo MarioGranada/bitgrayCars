@@ -176,6 +176,7 @@ h2 {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
 }
 .album-title{
   float: left;
@@ -201,6 +202,7 @@ h2 {
 }
 .album-arrow-open{
   transform: rotate(180deg) translateY(50%);
+  -webkit-transform: rotate(180deg) translateY(50%);
 }
 .album-images-hidden{
   display: none;
@@ -254,6 +256,7 @@ h2 {
   width: 650px;
   min-height: 700px;
   transform: translate(-50%, -50%); 
+  -webkit-transform: translate(-50%, -50%); 
   top: 50%;
   left: 50%;
   background: #FFF;

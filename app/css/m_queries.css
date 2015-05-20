@@ -56,11 +56,15 @@
 		width: 992px;
 	}
 	#map {
-    height: 220px;
-    width: 494px;
+    height: 495px;
+    width: 495px;
+	}
+	.user-info-map{
+		height: 495px;
+		width: 495px;
 	}
 	.user-info-box{
-		width: 494px;
+		width: 430px;
 	}
 }
 
