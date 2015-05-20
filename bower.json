@@ -1,8 +1,8 @@
 {
-  "name": "angular-phonecat",
-  "description": "A starter project for AngularJS",
+  "name": "bitgray-test",
+  "description": "Test for a Bitgray position",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-phonecat",
+  "homepage": "https://github.com/MarioGranada/bitgraytest",
   "license": "MIT",
   "private": true,
   "dependencies": {

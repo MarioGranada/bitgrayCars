@@ -1,17 +1,16 @@
-<ul class="album-images" ng-repeat="(key, value) in photos | groupBy: 'albumId' | toArray:true">
-  <div class="album-title-box"><div class="album-title">Album ID: {{ key }}</div><div class="album-arrow">&#x025BE;</div></div>
+<ul class="album-images-shown" ng-repeat="(key, value) in photos | groupBy: 'albumId' | toArray:true">
+  <div class="album-title-box" onclick="openAlbum(this)"><div class="album-title">Album ID: {{ key }}</div><div class="album-arrow" >&#x025BE;</div></div>
   <li class="image-box-container" ng-repeat="photo in value">
-    photo: {{ photo.id }} 
     <div class="image-box">
-    	<img class ng-src="{{photo.thumbnailUrl}}">
-    	<div class="image-id">Photo ID: {{photo.id}}</div>
-    	<div class="image-title">{{photo.title}}</div>
-    	<div class="image-window">
+    	<img class="thumb-image" ng-src="{{photo.thumbnailUrl}}" onclick="openImagePopup(this)">
+    	<div class="image-id" onclick="openImagePopup(this)"><span class="image-id-label">Photo ID:</span> {{photo.id}}</div>
+    	<div class="image-title" onclick="openImagePopup(this)">{{photo.title}}</div>
+    	<div class="image-window" onclick="stopParentEvent(e)">
     		<div class="image-window-head">
-    		<div class="close-image-window">X</div>
+            <div class="image-window-title">{{photo.title}}</div>
+    		<div class="close-image-window" onclick="closePopup()">X</div>
     		</div>
-    		<img ng-src="{{photo.url}}">
-    		<div class="image-window-title">{{photo.title}}</div>
+    		<img class="popup-image" ng-src="{{photo.url}}">
 		</div>
     </div>
   </li>

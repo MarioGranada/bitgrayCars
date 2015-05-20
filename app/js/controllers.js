@@ -9,8 +9,8 @@ bitgrayControllers.controller('UserLoginCtrl',['$scope','$http',
   $scope.name='Mario Granada';
 }]);
 
-bitgrayControllers.controller('UserProfileCtrl',['$scope','$http','$route','$location' ,
-  function($scope,$http,$route,$location){
+bitgrayControllers.controller('UserProfileCtrl',['$scope','$http','$route','$location','$templateCache' ,
+  function($scope,$http,$route,$location,$templateCache){
   $scope.userNameTest='Mario Granada';
   $scope.userList="";
   $scope.photos="";
@@ -45,17 +45,7 @@ bitgrayControllers.controller('UserProfileCtrl',['$scope','$http','$route','$loc
     error(function(data, status, headers, config) {
     $scope.userList="Ther was an error retrieving users data";
   });
-  $http({method: 'GET', url:'http://jsonplaceholder.typicode.com/photos'}).
-    success(function(data, status, headers, config) {
-    $scope.photos=data;
-    $scope.photos.forEach(function(photo){
-    photo.albumId= parseFloat(photo.albumId);
-    photo.id= parseFloat(photo.id);
-    });
-  }).
-    error(function(data, status, headers, config) {
-    $scope.photos="Ther was an error retrieving photos data";
-  });
+
   $scope.reloadRoute = function() {
    
    // $route.reload();
@@ -65,19 +55,16 @@ bitgrayControllers.controller('UserProfileCtrl',['$scope','$http','$route','$loc
    // $location.reload()
   }
   $scope.loadImages=function(){
-    alert("here!");
-  //   $http({method: 'GET', url:'http://jsonplaceholder.typicode.com/photos'}).
-  //   success(function(data, status, headers, config) {
-  //   $scope.photos=data;
-  //   $scope.photos.forEach(function(photo){
-  //   photo.albumId= parseFloat(photo.albumId);
-  //   photo.id= parseFloat(photo.id);
-  //   $(".user_profile_container").append("<image-gallery class='user-image-gallery'></image-gallery> ")
-  //   });
-  // }).
-  //   error(function(data, status, headers, config) {
-  //   $scope.photos="Ther was an error retrieving photos data";
-  // });
+    
+    $http({method: 'GET', url:'http://jsonplaceholder.typicode.com/photos', cache: $templateCache}).
+    success(function(data, status, headers, config) {
+    $scope.photos=data;
+
+    $scope.view='partials/image-gallery.html';
+  }).
+    error(function(data, status, headers, config) {
+    $scope.photos="Ther was an error retrieving photos data";
+  });
   }
 
 }]);

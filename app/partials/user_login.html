@@ -12,7 +12,7 @@
 			<label class="login-label">Password</label>
 			<input class="login-input" type="password" ng-model="userpassword" required ng-minlength="8" ng-maxlength="20" ng-pattern="/^(?=.*[A-Z]).+$/">
 			<div class="login-form-empty">Please fill in Password field</div>
-			<div class="login-form-invalid">Password should contain at least 1 uppercase letter</div>
+			<div class="login-form-invalid">Password should contain at least 1 uppercase letter and be less than 20 characters long</div>
 		</fieldset>
 		<fieldset class="login-fieldset">
 			<button class="login-button" type="submit" ng-click="checkInvalidFields()">Log In</button>

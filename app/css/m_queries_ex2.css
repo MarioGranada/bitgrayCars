@@ -1,0 +1,77 @@
+@media all and (min-width: 580px) and (max-width: 979px){
+	.exercise2-container{
+		width: 580px;
+	}
+	.ex2-first-block{
+		margin: 15px auto 10px auto;
+		width: 580px;
+		height: 290px;
+	}
+	.ex2-second-block{
+		width: 380px;
+		height: 250px;
+		margin: 0px auto 10px auto;
+	}
+	.ex2-third-block{
+		width: 280px;
+		height: 150px;
+		margin: 0px auto 10px auto;
+	}
+	.ex2-block{
+
+	}
+}
+@media all and (min-width: 980px) and (max-width: 1279px){
+	.exercise2-container{
+		width: 980px;
+	}
+	.ex2-first-block{
+		margin-top: 15px;
+		width: 830px;
+		height: 520px;
+		float: left;
+	}
+	.ex2-second-block{
+		width: 300px;
+		height: 240px;
+		margin: 25px 25px 10px 55px;
+		float: left;
+	}
+	.ex2-third-block{
+		width: 350px;
+		height: 280px;
+		float: right;
+		margin: 10px 25px 0px 0px;
+	}
+	.ex2-block{
+
+	}
+}
+@media all and (min-width: 1280px) {
+	.exercise2-container{
+		width: 1280px;
+	}
+	.ex2-first-block{
+		margin-top: 25px;
+		margin-right: 25px;
+		width: 720px;
+		height: 720px;
+		float: left;
+	}
+	.ex2-second-block{
+		width: 420px;
+		height: 355px;
+		margin-top: 25px;
+		margin-bottom: 10px;
+		float: right;
+	}
+	.ex2-third-block{
+		width: 420px;
+		height: 355px;
+		float: right;
+		clear: right;
+	}
+	.ex2-block{
+
+	}
+}

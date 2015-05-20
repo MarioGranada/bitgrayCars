@@ -1,9 +1,11 @@
+<div class="popup-overlay" onclick="closePopup()"></div>
 <div class="user-profile-body-container">
 <div class="user_profile_container">
 	<h1 class="welcome-user">Welcome {{randomUser.username}}!</h1>
 	<a href="#/user_login" class="log-out-link">Log Out</a>
 	<div class="user-info-container">
 		<div class="user-info-box">
+			<h2 class="user-details-title">User details: </h2>
 			<div class="user-id user-info-row"><label class="user-info-label">ID: </label>{{randomUser.id}} </div>
 			<div class="user-name user-info-row"><label class="user-info-label">Name: </label>{{randomUser.name}} </div>
 			<div class="user-username user-info-row"><label class="user-info-label">Username: </label>{{randomUser.username}}</div>
@@ -33,8 +35,8 @@
 		</div>
 
 	</div>
-	
-	<image-gallery class="user-image-gallery"></image-gallery>
+	<ng-include class="user-image-gallery" src="view"></ng-include> 
+	<!-- <image-gallery class="user-image-gallery"></image-gallery> -->
   
 </div>
 </div>

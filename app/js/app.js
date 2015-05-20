@@ -1,6 +1,6 @@
 /* App Module */
 
-var bitgrayApp = angular.module('bitgrayApp',['ngRoute','angular.filter','ngMap','bitgrayControllers','bitgrayFilters']);
+var bitgrayApp = angular.module('bitgrayApp',['ngRoute','angular.filter','ngMap','bitgrayControllers']);
 
 
 bitgrayApp.config(['$routeProvider', function($routeProvider){
