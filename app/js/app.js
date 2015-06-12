@@ -5,22 +5,23 @@ var bitgrayApp = angular.module('bitgrayApp',['ngRoute','angular.filter','bitgra
 
 bitgrayApp.config(['$routeProvider', function($routeProvider){
   $routeProvider.
-    when("/user_login",{
-      templateUrl:'partials/user_login.html',
-      controller: 'UserLoginCtrl'
+    when("/store",{
+      templateUrl:'partials/store.html',
+      controller: 'StoreCtrl'
     }).
-    when("/user_profile",{
-      templateUrl:'partials/user_profile.html',
-      controller: 'UserProfileCtrl'
+    when("/about-us",{
+      templateUrl:'partials/about_us.html',
+      controller: 'AboutUsCtrl'
+    }).
+    when("/privacy",{
+      templateUrl:'partials/privacy.html',
+      controller: 'PrivacyCtrl'
+    }).
+    when("/terms",{
+      templateUrl:'partials/terms.html',
+      controller: 'TermsCtrl'
     }).
     otherwise({
-      redirectTo: "/user_login"
+      redirectTo: "/store"
     });
 }]);
-
-// bitgrayApp.directive("imageGallery",function(){
-//     return {
-//       restrict: 'E',
-//       templateUrl: 'partials/image-gallery.html'
-//     };
-//   });

@@ -43,7 +43,7 @@ bitgrayControllers.controller('UserProfileCtrl',['$scope','$http','$route','$loc
     google.maps.event.trigger($scope.map, 'resize');
   }).
     error(function(data, status, headers, config) {
-    $scope.userList="Ther was an error retrieving users data";
+    $scope.userList="There was an error retrieving users data";
   });
 
   $scope.reloadRoute = function() {
@@ -63,7 +63,7 @@ bitgrayControllers.controller('UserProfileCtrl',['$scope','$http','$route','$loc
     $scope.view='partials/image-gallery.html';
   }).
     error(function(data, status, headers, config) {
-    $scope.photos="Ther was an error retrieving photos data";
+    $scope.photos="There was an error retrieving photos data";
   });
   }
 
