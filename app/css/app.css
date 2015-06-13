@@ -123,7 +123,11 @@ h2 {
 .view-container{
   padding: 0;
 }
-.car-main-info{
+.car-basic-info-box{
+  float: left;
+  width: 100%;
+}
+.car-main-info,.main-car-img,.car-full-title{
   float: left;
   display: none;
 }
@@ -148,7 +152,8 @@ h2 {
   float: left;
   clear: left;
   width: 100%;
-  border-bottom: 1px solid #777;   
+  border-bottom: 1px solid #000;   
+  cursor: text;
 }
 .car-info-label{
   background: #777;
@@ -160,7 +165,8 @@ h2 {
 .car-info{
  padding: 5px;
  float: left;
- background: #FFF 
+ background: #FFF;
+ word-wrap: break-word;
 }
 .car-price{
   color: #60cae8;
@@ -183,4 +189,79 @@ h2 {
   font-weight: bold;
   color: #e21e25;
   font-style: italic;
+}
+.thumb-car-img{
+  cursor: pointer;
+}
+.popup-overlay{
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.8;
+  display: none;
+  z-index: 8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.popup-overlay-open{
+  display: block;
+}
+.car-popup{
+  display: none;
+  position: absolute;
+  width: 767px;
+  min-height: 700px;
+  transform: translate(-50%, 0%); 
+  -webkit-transform: translate(-50%, 0%); 
+  left: 50%;
+  background: #FFF;
+  z-index: 9999;
+  padding: 25px;
+  border: 1px solid #777; 
+  cursor: pointer;
+}
+.image-window-open{
+  display: block;
+  cursor: default;
+}
+.car-popup-head{
+  float: left;
+  width: 100%;
+}
+.car-popup-title{
+  float: left;
+}
+.close-car-popup{
+  font-size: 24px;
+  cursor: pointer;
+  float: right;
+}
+.car-popup-title{
+  font-size: 16px;
+  font-weight: bold;
+}
+.car-popup-container .car-main-info{
+  display: block;
+}
+.car-details-image{
+  margin-bottom: 25px;
+}
+.car-main-info{
+  float: left;
+  width: 100%;
+}
+.car-main-info-row{
+  float: left;
+  width: 100%;
+}
+.car-details{
+  float: left;
+  width: 100%;
+  border-top: 1px solid #777; 
+  border-right: 1px solid #777; 
+}
+.car-details .car-main-info .car-info-label,.car-details .car-info-label{
+  width: 200px
 }
