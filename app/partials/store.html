@@ -1,6 +1,41 @@
-<section class="store-section slideshow-section"></section>
-<section class="store-section cars-gallery"></section>
-<div class="carsPopup">
-	<section class="store-section popup-car-image"></section>
-	<section class="store-section popup-car-info"></section>
+<section class="store-section slideshow-section">
+	<ul class="cars-slide-show">
+		<li class="car-slide" ng-repeat="car in slideCars | orderBy: 'model'  | toArray:true">
+			<div class="slide-car-img"><img class="slide-img" ng-src="{{::car['main-image']}}"></div>
+			<div class="slide-car-desc"><div class="slide-car-brand">{{::car.brand}} {{::car.model}} {{::car.year}}</div></div>
+		</li>
+	</ul>
+</section>
+<section class="store-section search-section">
+	<div class="search-bar">
+		<div class="search-box">
+			<form class="search-form">
+				<label>Search by brand:</label>
+				<input class="search-input" type="text" ng-model="searchCar" required ng-maxlength="20">
+			</form>
+		</div>
 </div>
+</section>
+<section class="store-section cars-gallery">
+	<ul class="cars-list">
+		<li class="car-box" ng-repeat="car in cars | orderBy: 'model' | filter: searchCar">
+			<div class="thumb-car-img"><img class="thumb-img" ng-src="{{::car.thumb}}"></div>
+			<div class="car-model car-info-row"><label class="car-info-label">Model</label><div class="car-info">{{::car.model}}</div></div>
+			<div class="car-year car-info-row"><label class="car-info-label">Year</label><div class="car-info">{{::car.year}}</div></div>
+			<div class="car-brand car-info-row"><label class="car-info-label">Brand</label><div class="car-info">{{::car.brand}}</div></div>
+			<div class="car-price car-info-row"><label class="car-info-label">Price</label><div class="car-info">{{::car.price}}</div></div>
+			<ul class="car-main-info">
+				<li class="car-main-info-row" ng-repeat="(key, value) in car.specs">
+					<div class="car-year car-info-row"><label class="car-info-label">{{::key}}</label><div class="car-info">{{::value}}</div></div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</section>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.cars-slide-show').bxSlider({
+  mode: 'fade'
+});
+});
+</script>

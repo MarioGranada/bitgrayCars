@@ -21,6 +21,10 @@ bitgrayApp.config(['$routeProvider', function($routeProvider){
       templateUrl:'partials/terms.html',
       controller: 'TermsCtrl'
     }).
+    when("/find-store",{
+      templateUrl:'partials/find_store.html',
+      controller: 'FindStoreCtrl'
+    }).
     otherwise({
       redirectTo: "/store"
     });

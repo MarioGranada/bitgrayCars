@@ -6,34 +6,41 @@
   <title>Bit Gray test</title>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="css/app.css">
-  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="http://bxslider.com/lib/jquery.bxslider.css" type="text/css">
   <link rel="stylesheet" href="css/m_queries.css">
 
   <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="http://bxslider.com/lib/jquery.bxslider.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-animate/angular-animate.js"></script>
   <script src="bower_components/angular-filter/dist/angular-filter.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+  <script src="https://raw.github.com/coolaj86/knuth-shuffle/master/index.js"></script>
   <script src="js/app.js"></script>
   <script src="js/controllers.js"></script>
   <script src="js/functions.js"></script>
 </head>
 <body>
-  <header><img class="login-bitgray-logo" ng-src="http://www.bitgray.co/images/logo-whitebig.png"> <nav class="navigation-links">
+  <header>
+    <div class="header-container">
+      <a class="bitgray-logo-link" href="index.html#/store">
+    <img class="login-bitgray-logo" ng-src="http://www.bitgray.co/images/logo-whitebig.png"> <nav class="navigation-links"></a>
     <ul class="top-links">
-      <li class="top-link-item"><a class="top-link" href="#">Find a store</a></li>
-      <li class="top-link-item"><a class="top-link" href="#">About Us</a></li>
+      <li class="top-link-item"><a class="top-link" href="index.html#/find-store">Find a store</a></li>
+      <li class="top-link-item"><a class="top-link" href="index.html#/about-us">About Us</a></li>
       <li class="top-link-item"><a class="top-link" href="#">Cars</a></li>
-  </ul></nav></header>
+  </ul></nav></div></header>
   <div class="view-container container-fluid">
     <div ng-view class="view-frame"></div>
   </div>
   <footer>
+    <div class="footer-container">
     <img class="login-bitgray-logo" ng-src="http://www.bitgray.co/images/logo-whitebig.png">
-    <div class="footer-links-box"><a class="footer-link" href="#">Terms & Conditions</a><a class="footer-link" href="#">Privacy Policy</a></div>
+    <div class="footer-links-box"><a class="footer-link" href="index.html#/terms">Terms & Conditions</a><a class="footer-link" href="index.html#/privacy">Privacy Policy</a></div>
     <div class="copyright">2015 &#169; BitGrayCars Co.</div>
+    </div>
   </footer>
 </body>
 </html>

@@ -1,18 +1,81 @@
+@import "fonts.css";
 body {
   padding: 0;
-  /*color: #777;*/
   color: #393939;
+  font-family: "MovistarTextRegular";
+}
+header, footer, section,.view-container{
+  float: left;
+  width: 100%;
+}
+.header-container,.footer-container,.view-frame{
+  margin: auto;
+  padding: 25px;
+  display: table;
+}
+ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.bitgray-logo-link{
+  float: left;
+}
+.navigation-links{
+  float: right;
+}
+.top-links{
+  float: left;
+  margin-top: 15px;
+}
+.top-link-item{
+  float: left;
+  color: #393939;
+  margin-right: 25px;
+}
+.footer-link,.top-link{
+  float: left;
+  font-size: 24px;
+  color: #393939;
+  text-decoration: none;
+}
+.footer-link{
+  font-size: 16px;
+  margin-right: 25px;
+}
+.footer-link,.top-link:hover{
+  color: #f6c715;
+  text-decoration: none;
+}
+.header-container,.footer-container{
+  
+
 }
 .infoWindowContent {
     font-size:  14px !important;
     border-top: 1px solid #ccc;
     padding-top: 10px;
 }
-  #map {
+#map {
     border: 1px solid #777;
-  }
+    float: left;
+    width: 100%;
+    height: 500px;
+}
 h1{
-  cursor: default;
+  cursor: text;
+}
+.privacy-terms-title,.about-us-title,.find-store-title{
+  float: left;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.privacy-terms-desc,.about-us-desc {
+  float: left;
+  width: 100%;
+  text-align: justify;
 }
 h2 {
     margin-bottom:0;
@@ -34,34 +97,7 @@ h2 {
 }
 .login-bitgray-logo{
   width: 100px;
-  float: right;
-}
-.user-login-form{
-  width: 100%;
   float: left;
-}
-.login-fieldset{
-  float: left;
-  width: 100%;
-  margin: 10px 0px;
-}
-.login-header{
-  float: left;
-}
-.login-label{
-  float: left;
-}
-.login-input{
-  float: right;
-}
-.green-login-color-row{
-  background: #bed431;
-}
-.yellow-login-color-row{
-  background: #f6c815;
-}
-.red-login-color-row{
-  background: #e21e25;
 }
 .login-color-row {
   float: left;
@@ -73,7 +109,7 @@ h2 {
 .view-container{
   padding: 0;
 }
-.login-button,.user-profile-button{
+.search-button{
   /*background: #60cae8;*/
   background: rgba(96,202,232,1);
   color: #FFF;
@@ -85,221 +121,8 @@ h2 {
   cursor: pointer;
   float: left;
 }
-.login-bitgray-logo{
-  opacity: 0.9;
-}
-.login-form-empty, .login-form-invalid{
-  color: #FF0000;
-  display: none;
-  font-weight: bold;
-  font-size: 14px;
-  float: left;
-  clear: both;
-}
-/*.ng-invalid-required + .login-form-empty, .ng-invalid-pattern ~ .login-form-invalid{
-  display: block;
-}*/
-.ng-invalid-pattern ~ .login-form-invalid{
-  display: block;
-}
-.required-field + .login-form-empty, .required-field ~ .login-form-invalid{
-  display: block;
-}
-.user_profile_container{
-  min-height: 550px;
-  margin: 25px auto;
-  padding: 20px;
-  background: #FFF;
-  display: table;
-}
-.welcome-user,.user-details-title{
-  float: left;
-}
-.user-details-title{
-  font-weight: bold;
-  margin: 25px 0px 25px 25px;
-}
-.log-out-link{
-  float: right;
-}
-.user-info-container{
-  float: left;
-  width: 100%;
-}
-.user-info-box{
-  float: left;
-  border: 1px solid #777;
-  margin-right: 25px;
-}
-.user-info-row,.user-info-address-box, .user-info-company-box,.user-profile-buttons-row{
-  float: left;
-  clear: both;
-}
-.user-info-address-box, .user-info-company-box,.user-info-row{
-  margin-left: 25px;
-}
-.user-info-map{
-  float: right;
-}
-.user-profile-buttons-row{
-  margin: 25px 0px;
-}
-.user-profile-button{
-  margin-left: 25px;
-}
-.user-info-label{
-  margin-right: 15px;
-}
-.user-profile-body-container{
-  width: 100%;
-  height: 100%;
-  float: left;
-  background: #000;
-}
-.user-image-gallery{
-  float: left;
-  width: 100%;
-  background: #FFF;
-  z-index: 5;
-}
-.album-title-box{
-  float: left;
-  width: 100%;
-  font-size: 16px;
-  font-weight: bold;
-  height: 100px;
-  border: 1px solid #393939;
-  cursor: pointer;
-  margin-top: 25px;
-}
-.album-title, .album-arrow{
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-}
-.album-title{
-  float: left;
-  margin-left: 25px;
-}
-.album-arrow{
-  float: right;
-  margin-right: 25px;
-  font-size: 28px;
-  /*animation: rotateAlbumArrow 1s ease;*/
-  -webkit-transition: transform 1s ease;
-  -moz-transition: transform 1s ease;
-  -o-transition: transform 1s ease;
-  transition: transform 1s ease;
-}
-@keyframes rotateAlbumArrow{
-  from: {transform: rotate(0deg);};
-  to: {transform: rotate(180deg);};
-}
-@keyframes displayAlbumList{
-  from {display: none;}
-  to {display: table-row;}
-}
-.album-arrow-open{
-  transform: rotate(180deg) translateY(50%);
-  -webkit-transform: rotate(180deg) translateY(50%);
-}
-.album-images-hidden{
-  display: none;
-  animation-name: displayAlbumList;
-  animation-duration: 1s;
-}
-.album-images-shown{
-  display: block;
-  padding: 0;
-  margin: 0;
-}
-.image-box{
-  cursor: pointer;
-  text-align: center;
-  border: 1px solid #777;
-  min-height: 335px;
-  padding: 10px;
-}
-.image-box-container{
+.car-main-info{
   float: left;
   display: none;
   list-style: none;
-  width: 170px;
-  padding: 0;
-  margin: 15px;
-  min-height: 335px;
-
-}
-.thumb-image{
-  border: 1px solid #777;
-}
-.image-id,.image-box,.thumb-image,.image-title{
-  float: left;
-  width: 100%;
-}
-.image-id{
-  text-align: left;
-}
-.image-title,.image-id{
-  margin-top: 10px;
-}
-.image-id-label,.image-title{
-  font-weight: bold;
-}
-.image-box-container-shown{
-  display: table-cell;
-}
-.image-window{
-  display: none;
-  position: fixed;
-  width: 650px;
-  min-height: 700px;
-  transform: translate(-50%, -50%); 
-  -webkit-transform: translate(-50%, -50%); 
-  top: 50%;
-  left: 50%;
-  background: #FFF;
-  z-index: 10;
-  padding: 25px;
-  border: 1px solid #777; 
-  cursor: pointer;
-}
-.image-window-open{
-  display: block;
-  cursor: default;
-}
-.image-window-head{
-  float: left;
-  width: 100%;
-}
-.image-window-title{
-  float: left;
-}
-.close-image-window{
-  font-size: 24px;
-  cursor: pointer;
-  float: right;
-}
-.popup-overlay{
-  width: 100%;
-  height: 100%;
-  background: #000;
-  opacity: 0.8;
-  display: none;
-  z-index: 8;
-  position: fixed;
-  top: 0;
-  left: 0;
-  cursor: pointer;
-}
-.popup-overlay-open{
-  display: block;
-}
-.popup-image{
-  float: left;
-}
-.image-window-title{
-  font-size: 16px;
-  font-weight: bold;
 }

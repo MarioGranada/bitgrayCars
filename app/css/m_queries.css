@@ -141,21 +141,7 @@
 
 /* Large devices (large desktops, 1200px and up) */
 @media all and (min-width: 1200px) {
-	.user_login_form_container{
-  		width: 400px;
-	}
-	.user_profile_container{
-		width: 1200px;
-	}
-	#map {
-    height: 420px;
-    width: 598px;
-	}
-	.user-info-box{
-		width: 537px;
-	}
-	.user-info-map{
-		height: 420px;
-		width: 598px;
-	}
+.header-container,.footer-container,.view-frame{
+	width: 1150px;
+}
 }

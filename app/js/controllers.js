@@ -4,29 +4,23 @@
 
 var bitgrayControllers = angular.module('bitgrayControllers',[]);
 
-bitgrayControllers.controller('UserLoginCtrl',['$scope','$http',
+bitgrayControllers.controller('AboutUsCtrl',['$scope','$http',
   function($scope,$http){
-  $scope.name='Mario Granada';
+  
 }]);
-
-bitgrayControllers.controller('UserProfileCtrl',['$scope','$http','$route','$location','$templateCache' ,
-  function($scope,$http,$route,$location,$templateCache){
-  $scope.userNameTest='Mario Granada';
-  $scope.userList="";
-  $scope.photos="";
-  // $scope.arrayTest={};
-  $http({method: 'GET', url:'http://jsonplaceholder.typicode.com/users'}).
-    success(function(data, status, headers, config) {
-    $scope.userList=data;
-    $scope.randomUser=$scope.userList[Math.floor(Math.random() * $scope.userList.length)];
-    $scope.existGeoItems=false;
-
-    // if($scope.arrayTest && !jQuery.isEmptyObject($scope.arrayTest)){console.log(true)} else{console.log(false)};
-    if($scope.randomUser.address.geo && !jQuery.isEmptyObject($scope.randomUser.address.geo)){
-      $scope.existGeoItems=true;
-      var mapOptions = {
-        zoom: 3,
-        center: new google.maps.LatLng($scope.randomUser.address.geo.lat, $scope.randomUser.address.geo.lng),
+bitgrayControllers.controller('TermsCtrl',['$scope','$http',
+  function($scope,$http){
+  
+}]);
+bitgrayControllers.controller('PrivacyCtrl',['$scope','$http',
+  function($scope,$http){
+  
+}]);
+bitgrayControllers.controller('FindStoreCtrl',['$scope','$http',
+  function($scope,$http){
+    var mapOptions = {
+        zoom: 18,
+        center: new google.maps.LatLng("4.671752", "-74.057711"),
         mapTypeId: google.maps.MapTypeId.TERRAIN
     }
 
@@ -35,54 +29,30 @@ bitgrayControllers.controller('UserProfileCtrl',['$scope','$http','$route','$loc
     $scope.markers = [];
     var marker = new google.maps.Marker({
         map: $scope.map,
-        position: new google.maps.LatLng($scope.randomUser.address.geo.lat, $scope.randomUser.address.geo.lng),
-        title: $scope.randomUser.name
+        position: new google.maps.LatLng("4.671752", "-74.057711"),
     });
     $scope.markers.push(marker);
-    };
-    google.maps.event.trigger($scope.map, 'resize');
-  }).
-    error(function(data, status, headers, config) {
-    $scope.userList="There was an error retrieving users data";
-  });
-
-  $scope.reloadRoute = function() {
-   
-   // $route.reload();
-   // Using $route.reload(); causes an error with the google maps plugin which displays up only one section (top left)
-   // of the map, one solution is to use location.reload();
-   location.reload();
-   // $location.reload()
-  }
-  $scope.loadImages=function(){
     
-    $http({method: 'GET', url:'http://jsonplaceholder.typicode.com/photos', cache: $templateCache}).
+    google.maps.event.trigger($scope.map, 'resize');
+  
+}]);
+
+bitgrayControllers.controller('StoreCtrl',['$scope','$http','$route','$location','$templateCache' ,
+  function($scope,$http,$route,$location,$templateCache){
+  $scope.nameTest='Mario Granada';
+  $scope.cars="";
+  $http({method: 'GET', url:'http://127.0.0.1:8000/app/js/cars.json'}).
     success(function(data, status, headers, config) {
-    $scope.photos=data;
+      $scope.cars=data;
+      var randomCars=window.knuthShuffle(data);
+      $scope.slideCars=randomCars.slice(0,3);
 
-    $scope.view='partials/image-gallery.html';
-  }).
+    }).
     error(function(data, status, headers, config) {
-    $scope.photos="There was an error retrieving photos data";
+    $scope.cars="There was an error retrieving Cars data";
   });
-  }
+
+
 
 }]);
-
-bitgrayControllers.controller('UserLoginFormCtrl',['$scope', '$location' ,
-  function($scope,$location){
-  // $scope.username='Mario Granada';
-  // $scope.userpassword="";
-  $scope.validateLoginForm=function(){
-
-    $location.path("/user_profile")
-  }
-  $scope.checkInvalidFields=function(){
-    //We don't want to prompt the user with and invalid field annotation, so we display it up 
-    //once he/she clicks this button
-    //Angular instantiates forms as invalid, this way 'ng-invalid-required' class is up from the begining
-    $(".ng-invalid-required").addClass("required-field")
-  }
-}]);
-
 

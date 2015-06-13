@@ -1,0 +1,13 @@
+@font-face{
+	font-family: "MovistarHeadline";
+	src: url("../fonts/movistarHeadline/movistarheadline-regular-webfont.eot") format("eot"),
+		url("../fonts/movistarHeadline/movistarheadline-regular-webfont.ttf") format("truetype"),
+		url("../fonts/movistarHeadline/movistarheadline-regular-webfont.woff") format("woff");
+}
+@font-face{
+	font-family: "MovistarTextRegular";
+	src: url("../fonts/movistarText/movistartextregular.eot") format("eot"),
+		url("../fonts/movistarText/movistartextregular.ttf") format("truetype"),
+		url("../fonts/movistarText/movistartextregular.woff") format("woff");
+}
+/*Web fonts found at http://www.movistar.cl/web-mobile/css/font/*/
