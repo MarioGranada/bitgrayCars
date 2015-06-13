@@ -17,13 +17,14 @@
 </div>
 </section>
 <section class="store-section cars-gallery">
+	<h1 class="dream-car-title">Find your dream Car today!</h1>
 	<ul class="cars-list">
 		<li class="car-box" ng-repeat="car in cars | orderBy: 'model' | filter: searchCar">
 			<div class="thumb-car-img"><img class="thumb-img" ng-src="{{::car.thumb}}"></div>
 			<div class="car-model car-info-row"><label class="car-info-label">Model</label><div class="car-info">{{::car.model}}</div></div>
 			<div class="car-year car-info-row"><label class="car-info-label">Year</label><div class="car-info">{{::car.year}}</div></div>
 			<div class="car-brand car-info-row"><label class="car-info-label">Brand</label><div class="car-info">{{::car.brand}}</div></div>
-			<div class="car-price car-info-row"><label class="car-info-label">Price</label><div class="car-info">{{::car.price}}</div></div>
+			<div class="car-price car-info-row"><label class="car-info-label">Price</label><div class="car-info">${{::car.price}}</div></div>
 			<ul class="car-main-info">
 				<li class="car-main-info-row" ng-repeat="(key, value) in car.specs">
 					<div class="car-year car-info-row"><label class="car-info-label">{{::key}}</label><div class="car-info">{{::value}}</div></div>
@@ -33,9 +34,11 @@
 	</ul>
 </section>
 <script type="text/javascript">
-$(document).ready(function(){
+$(window).load(function(){
   $('.cars-slide-show').bxSlider({
   mode: 'fade'
-});
+  });
+  $(".bx-viewport").css("height","478px");
+  $(".bx-viewport").css("widthl","717px");
 });
 </script>

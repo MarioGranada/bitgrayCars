@@ -144,4 +144,7 @@
 .header-container,.footer-container,.view-frame{
 	width: 1150px;
 }
+.bx-wrapper{
+  width: 717px;
+}
 }

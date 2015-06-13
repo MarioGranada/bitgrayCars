@@ -4,6 +4,9 @@ body {
   color: #393939;
   font-family: "MovistarTextRegular";
 }
+label{
+  margin: 0;
+}
 header, footer, section,.view-container{
   float: left;
   width: 100%;
@@ -12,6 +15,12 @@ header, footer, section,.view-container{
   margin: auto;
   padding: 25px;
   display: table;
+}
+.header-container{
+  border-bottom: 1px solid #393939;
+}
+.footer-container{
+ border-top: 1px solid #393939; 
 }
 ul{
   list-style: none;
@@ -34,22 +43,48 @@ ul{
   margin-right: 25px;
 }
 .footer-link,.top-link{
-  float: left;
   font-size: 24px;
-  color: #393939;
   text-decoration: none;
+}
+.top-link{
+  float: left;
+  color: #393939;
 }
 .footer-link{
   font-size: 16px;
   margin-right: 25px;
+  color: #f6c715;
 }
-.footer-link,.top-link:hover{
+.top-link:hover{
   color: #f6c715;
   text-decoration: none;
 }
-.header-container,.footer-container{
-  
-
+.footer-link:hover{
+  color: #393939;
+  text-decoration: none;
+}
+.footer-subcontainer{
+  width: 320px;
+  margin: auto;
+  text-align: center;
+}
+.footer-subcontainer .login-bitgray-logo{
+  float: none;
+  margin: auto;
+}
+.footer-links-box{
+  float: left;
+  clear: left;
+  width: 100%;
+}
+.copyright{
+  float: left;
+  clear: left;
+  text-align: center;
+  width: 100%;
+}
+.privacy-link{
+  margin-right: 0;
 }
 .infoWindowContent {
     font-size:  14px !important;
@@ -65,7 +100,7 @@ ul{
 h1{
   cursor: text;
 }
-.privacy-terms-title,.about-us-title,.find-store-title{
+.privacy-terms-title,.about-us-title,.find-store-title,.dream-car-title{
   float: left;
   width: 100%;
   text-align: center;
@@ -81,48 +116,71 @@ h2 {
     margin-bottom:0;
     margin-top: 0;
 }
-.user_login_form_container{
-  width: 400px;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  border: 1px solid #777; 
-  padding: 25px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  background: rgb(255,255,255);
-  opacity: 0.9;
-  z-index: 10px;
-  display: table;
-}
 .login-bitgray-logo{
   width: 100px;
   float: left;
 }
-.login-color-row {
-  float: left;
-  display: block;
-  table-layout: fixed;
-  width: 100%;
-  margin: 0;
-}
 .view-container{
   padding: 0;
-}
-.search-button{
-  /*background: #60cae8;*/
-  background: rgba(96,202,232,1);
-  color: #FFF;
-  border: 1px solid #60cae8;
-  border-radius: 5px;
-  padding: 5px 10px;
-  font-weight: bold;
-  font-size: 16px;
-  cursor: pointer;
-  float: left;
 }
 .car-main-info{
   float: left;
   display: none;
-  list-style: none;
+}
+.search-box{
+  float: right;
+  margin-bottom: 25px;
+}
+.search-bar{
+  float: left;
+  width: 100%;
+}
+.cars-list{
+  float: left;
+  width: 100%;
+}
+.car-box{
+  float: left;
+  margin: 0px 15px 15px 0px;
+  border: 1px solid #777;
+}
+.car-info-row{
+  float: left;
+  clear: left;
+  width: 100%;
+  border-bottom: 1px solid #777;   
+}
+.car-info-label{
+  background: #777;
+  color: #f6c715;
+  float: left;
+  padding: 5px;
+  min-width: 50px;
+}
+.car-info{
+ padding: 5px;
+ float: left;
+ background: #FFF 
+}
+.car-price{
+  color: #60cae8;
+  font-weight: bold;
+}
+.bx-wrapper{
+  margin: auto;
+  text-align: center;
+}
+.search-form label{
+  font-style: italic;
+  margin-right: 25px;
+}
+.slide-car-desc{
+  font-family: "MovistarTextRegular";
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #e21e25;
+  font-style: italic;
 }
