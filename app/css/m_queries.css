@@ -1,12 +1,208 @@
 /* Extra small devices (Phones, up to 767px) */
-@media (max-width: 767px) {  
+@media all and (min-width: 320px) and (max-width: 579px){
 
-	#map {
+.header-container, .footer-container, .view-frame{
+	float: left;
+	width: 100%;
+}
+.top-link{
+	font-size: 20px;
+}
+.view-frame{
+	padding: 25px 0px;
+}
+#map {
     height: 320px;
     width: 100%;
     float: left;
     clear: left;
-    }
+}
+.search-box{
+	margin-right: 10px;
+}
+.header-container{
+	position: relative;
+}
+.footer-container{
+	padding: 25px 0px;
+}
+.bx-wrapper{
+  
+}
+.compare-cars-col2{
+	width: 353px;
+}
+.compare-cars-col3{
+	width: 229px;
+}
+.compare-cars-col2.detailed-car{
+ margin-top: 235px; 
+}
+.compare-cars-col3.detailed-car{
+ margin-top: 153px; 
+}
+.compare-cars-col2 .thumb-car-img .thumb-img{
+	width: 353px;
+}
+.compare-cars-col3 .thumb-car-img .thumb-img{
+	width: 229px;
+}
+.compare-cars-col3 .car-info-row .car-info-label{
+	width: 100%;
+} 
+.mobile-toggle{
+	display: block;
+	position: relative;
+}
+.mobile-toggle-open,.mobile-view-open,.mobile-footer-open,.mobile-logo-open{
+	right: 200px;
+}
+.mobile-view-open,.mobile-footer-open{
+	position: relative;
+}
+.navigation-links{
+	display: none;
+	position: absolute;
+	width: 200px;
+	height: 300px;
+	top: 0;
+	right: 0px;
+	background: #FFF;
+	z-index: 9999;
+}
+.open-navigation-links{
+	display: block;
+}
+.top-link-item{
+	clear: left;
+	width: 100%;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #777;
+}
+.top-links{
+	margin-top: 18px;
+	width: 100%;
+}
+.navigation-links{
+}
+.bx-wrapper .bx-viewport{
+	left: 0px;
+}
+.car-box{
+	margin: 0 15px 15px;
+}
+.dropdowns-box{
+	display: none;
+}
+.main-img,.car-popup,.car-popup-container{
+	width: 100%;
+}
+.car-details{
+	border: 1px solid #777;
+}
+.car-details .car-main-info .car-info-label, .car-details .car-info-label{
+	width: 100%;
+}
+}
+/* Extra small devices (Phones, up to 767px) */
+@media all and (min-width: 580px) and (max-width: 767px){
+
+.header-container, .footer-container, .view-frame{
+	float: left;
+	width: 100%;
+}
+.top-link{
+	font-size: 20px;
+}
+.view-frame{
+	padding: 25px 0px;
+}
+#map {
+    height: 320px;
+    width: 100%;
+    float: left;
+    clear: left;
+}
+.search-box{
+	margin-right: 10px;
+}
+.header-container{
+	position: relative;
+}
+.footer-container{
+	padding: 25px 0px;
+}
+.bx-wrapper{
+  
+}
+.compare-cars-col2{
+	width: 353px;
+}
+.compare-cars-col3{
+	width: 229px;
+}
+.compare-cars-col2.detailed-car{
+ margin-top: 235px; 
+}
+.compare-cars-col3.detailed-car{
+ margin-top: 153px; 
+}
+.compare-cars-col2 .thumb-car-img .thumb-img{
+	width: 353px;
+}
+.compare-cars-col3 .thumb-car-img .thumb-img{
+	width: 229px;
+}
+.compare-cars-col3 .car-info-row .car-info-label{
+	width: 100%;
+} 
+.mobile-toggle{
+	display: block;
+	position: relative;
+}
+.mobile-toggle-open,.mobile-view-open,.mobile-footer-open,.mobile-logo-open{
+	right: 200px;
+}
+.mobile-view-open,.mobile-footer-open{
+	position: relative;
+}
+.navigation-links{
+	display: none;
+	position: absolute;
+	width: 200px;
+	height: 300px;
+	top: 0;
+	right: 0px;
+	background: #FFF;
+	z-index: 9999;
+}
+.open-navigation-links{
+	display: block;
+}
+.top-link-item{
+	clear: left;
+	width: 100%;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #777;
+}
+.top-links{
+	margin-top: 18px;
+	width: 100%;
+}
+.navigation-links{
+}
+.bx-wrapper .bx-viewport{
+	left: 0px;
+}
+.car-box{
+	margin: 0 15px 15px;
+}
+.dropdowns-box{
+	display: none;
+}
+.main-img,.car-popup,.car-popup-container{
+	width: 100%;
+}
 
 }
 /* Small devices (Tablets, 768px and up) */
@@ -39,6 +235,9 @@
 .compare-cars-col3 .car-info-row .car-info-label{
 	width: 100%;
 } 
+#map{
+	height: 500px;
+}
 
 
 }
@@ -72,6 +271,9 @@
 .compare-cars-col3 .car-info-row .car-info-label{
 	width: 100%;
 } 
+#map{
+	height: 500px;
+}
 
 }
 
@@ -103,5 +305,8 @@
 }
 .compare-cars-col3 .car-info-row .car-info-label{
 	width: 100%;
+}
+#map{
+	height: 500px;
 }
 }

@@ -70,7 +70,9 @@ $(window).load(function(){
   $('.cars-slide-show').bxSlider({
   mode: 'fade'
   });
+  if ($(window).width()>=768) {
   $(".bx-viewport").css("height","478px");
+}
 });
 
 </script>

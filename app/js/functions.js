@@ -1,16 +1,12 @@
 $(window).resize(function(){
-	resizeColorRows();
+	resizeCorrections();
 });
-function resizeColorRows(){
-	var windowHeight=$(window).height();
-	var rowHeight=windowHeight/3;
-	$(".login-color-row").css("height",rowHeight);
-	return false;
-}
-function openAlbum(element){
-	$(element).children(".album-arrow").toggleClass("album-arrow-open");
-	$(element).siblings(".image-box-container").toggleClass("image-box-container-shown")
-	return false;
+function resizeCorrections(){
+	if ($(window).width()>=768) {
+		$(".navigation-links").css("display","block");
+	}else{
+		$(".navigation-links").css("display","none");
+	}
 }
 function openPopup(element){
 	$(".popup-overlay").toggleClass("popup-overlay-open");
@@ -71,4 +67,11 @@ function compareCars(element){
 }
 function displaySecondaryCompareDropdown(){
 	$(".cars-dropdown-1").toggleClass("cars-dropdown-1-visible");
+}
+function openNavMobile(element){
+	$(".navigation-links").animate({width:'toggle'},500);
+	$(element).toggleClass("mobile-toggle-open");
+	$(".view-frame").toggleClass("mobile-view-open");
+	$("footer").toggleClass("mobile-footer-open");
+	$(".bitgray-logo-link").toggleClass("mobile-footer-open");
 }
