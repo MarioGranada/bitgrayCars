@@ -19,7 +19,7 @@
 <section class="store-section cars-gallery">
 	<h1 class="dream-car-title">Find your dream Car today!</h1>
 	<ul class="cars-list">
-		<li class="car-box" ng-repeat="car in cars | orderBy: 'model' | filter: searchCar">
+		<li id="{{::car.model | removeSpaces}}" class="car-box" ng-repeat="car in cars | orderBy: 'model' | filter: searchCar">
 			<div class="thumb-car-img" onclick="openPopup(this)"><img class="thumb-img" ng-src="{{::car.thumb}}"></div>
 			<div class="main-car-img"><img class="main-img" ng-src="{{::car['main-image']}}"></div>
 			<div class="car-full-title">{{::car.brand}} {{::car.model}} {{::car.year}}</div>
@@ -45,6 +45,23 @@
     		<div class="close-car-popup" onclick="closePopup()">X</div>
     	</div>
 		<div class="car-details-image"></div>
+		<div class="dropdown-container">
+			<div class="dropdowns-box">
+			<label class="compare-title">Compare Cars</label>
+			<select class="cars-dropdown cars-dropdown-0" id="cars-dropdown-0" onchange="compareCars(this)">
+				<option class="cars-dropdown-option" value="--">Select an Option</option>
+				<option class="cars-dropdown-option" ng-repeat="car in cars" value="{{::car.model | removeSpaces}}">
+					{{::car.model}}
+				</option>
+			</select>
+			<select class="cars-dropdown cars-dropdown-1" id="cars-dropdown-1" onchange="compareCars(this)">
+				<option class="cars-dropdown-option" value="--">Select an Option</option>
+				<option class="cars-dropdown-option" ng-repeat="car in cars" value="{{::car.model | removeSpaces}}">
+					{{::car.model}}
+				</option>
+			</select>
+			</div>
+		</div>
 		<div class="car-details"></div>
 	</div>
 </section>
@@ -55,4 +72,5 @@ $(window).load(function(){
   });
   $(".bx-viewport").css("height","478px");
 });
+
 </script>

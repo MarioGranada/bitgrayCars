@@ -1,142 +1,78 @@
 /* Extra small devices (Phones, up to 767px) */
 @media (max-width: 767px) {  
-	.user_login_form_container{
-		width: 100%;
-		-webkit-transform: translateY(-50%);
-		transform: translateY(-50%);
-		left: 0;
-	}
-	.login-header{
-		display: none;
-	}
-	.login-button{
-		width: 100%;
-	}
-	.login-bitgray-logo{
-		float: none;
-		position: relative;
-		margin: auto;
-		left: 50%;
-		-webkit-transform: translateX(-50%);
-		transform: translateX(-50%);
-	}
-	.login-label{
-		clear: both;
-		width: 100%;
-		text-align: left;
-	}
-	.login-input{
-		width: 100%;
-	}
-	.welcome-user{
-		margin-left: 25px;
-	}
-	.welcome-user,.user-details-title{
-		font-size: 28px;
-		word-wrap: break-word;
-		font-weight: normal;
-	}
-	.user_profile_container{
-		width: 100%;
-		padding: 0;
-		position: relative;
-	}
-	.log-out-link{
-		position: absolute;
-		top: 0px;
-		right: 25px;
-	}
-	.user-profile-button{
-		margin: 0px 0px 25px 25px;
-	}
+
 	#map {
     height: 320px;
     width: 100%;
     float: left;
     clear: left;
     }
-    .user-info-map{
-		height: 320px;
-		width: 100%;
-		margin-bottom: 25px;
-	}
-	.user-info-box{
-		width: 100%;
-		margin: 0px 0px 25px 0px;
-	}
-	.user-info-box,#map,.album-title-box{
-		border-right: none;
-		border-left: none;
-	}
-	.user-image-gallery{
-		padding-bottom: 25px
-	}
-	.image-window{		
-		width: 100%;
-		-webkit-transform: translateY(-50%);
-		transform: translateY(-50%);
-		left: 0;
-		min-height: 200px;
-	}
-	.image-window-title{
-		width: 100%;
-		clear: both;
-		text-align: center;
-	}
-	.close-image-window{
-		position: absolute;
-		right: 10px;
-		top: 0;
-	}
-	.popup-image{
-		width: 100%;
-	}
+
 }
 /* Small devices (Tablets, 768px and up) */
-@media all and (min-width:768px ) and (max-width: 991px) { 
-	.user_login_form_container{
-  		width: 400px;
-  		display: block;
-	}
-	.user_profile_container{
-		width: 728px;
-	}
-	#map {
-    height: 520px;
-    width: 726px;
-    float: left;
-    clear: left;
-    }
-    .user-info-map{
-		height: 520px;
-		width: 726px;
-	}
-	.user-info-box{
-		width: 726px;
-		margin: 0px 0px 25px 0px;
-	}
+@media all and (min-width:768px ) and (max-width: 991px) {
+
+.header-container,.footer-container,.view-frame{
+	width: 718px;
+}
+.bx-wrapper{
+  width: 717px;
+}
+.compare-cars-col2{
+	width: 353px;
+}
+.compare-cars-col3{
+	width: 229px;
+}
+.compare-cars-col2.detailed-car{
+ margin-top: 235px; 
+}
+.compare-cars-col3.detailed-car{
+ margin-top: 153px; 
+}
+.compare-cars-col2 .thumb-car-img .thumb-img{
+	width: 353px;
+}
+.compare-cars-col3 .thumb-car-img .thumb-img{
+	width: 229px;
+}
+.compare-cars-col3 .car-info-row .car-info-label{
+	width: 100%;
+} 
+
 
 }
 /* Medium devices (desktops, 992px and up) */
-@media all and (min-width:992px ) and (max-width: 1199px) { 
-	.user_login_form_container{
-  		width: 400px;
-  		display: block;
-	}
-	.user_profile_container{
-		width: 992px;
-	}
-	#map {
-    height: 495px;
-    width: 495px;
-	}
-	.user-info-map{
-		height: 495px;
-		width: 495px;
-	}
-	.user-info-box{
-		width: 430px;
-	}
+@media all and (min-width:992px ) and (max-width: 1199px) {
+
+.header-container,.footer-container,.view-frame{
+	width: 942px;
+}
+.bx-wrapper{
+  width: 717px;
+}
+.compare-cars-col2{
+	width: 353px;
+}
+.compare-cars-col3{
+	width: 229px;
+}
+.compare-cars-col2.detailed-car{
+ margin-top: 235px; 
+}
+.compare-cars-col3.detailed-car{
+ margin-top: 153px; 
+}
+.compare-cars-col2 .thumb-car-img .thumb-img{
+	width: 353px;
+}
+.compare-cars-col3 .thumb-car-img .thumb-img{
+	width: 229px;
+}
+.compare-cars-col3 .car-info-row .car-info-label{
+	width: 100%;
+} 
+
 }
 
 /* Large devices (large desktops, 1200px and up) */
@@ -146,5 +82,26 @@
 }
 .bx-wrapper{
   width: 717px;
+}
+.compare-cars-col2{
+	width: 353px;
+}
+.compare-cars-col3{
+	width: 229px;
+}
+.compare-cars-col2.detailed-car{
+ margin-top: 235px; 
+}
+.compare-cars-col3.detailed-car{
+ margin-top: 153px; 
+}
+.compare-cars-col2 .thumb-car-img .thumb-img{
+	width: 353px;
+}
+.compare-cars-col3 .thumb-car-img .thumb-img{
+	width: 229px;
+}
+.compare-cars-col3 .car-info-row .car-info-label{
+	width: 100%;
 }
 }

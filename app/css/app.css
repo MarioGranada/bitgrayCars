@@ -176,7 +176,11 @@ h2 {
   margin: auto;
   text-align: center;
 }
-.search-form label{
+.search-form,.dropdowns-box{
+  border-bottom: 1px solid #777;
+  padding-bottom: 15px;
+}
+.search-form label,.compare-title{
   font-style: italic;
   margin-right: 25px;
 }
@@ -264,4 +268,34 @@ h2 {
 }
 .car-details .car-main-info .car-info-label,.car-details .car-info-label{
   width: 200px
+}
+.cars-dropdown-1{
+  display: none;
+}
+.cars-dropdown-1.cars-dropdown-1-visible{
+  display: block;
+}
+.compare-cars-col2,.compare-cars-col3{
+  margin-right: 10px;
+  float: left;
+}
+.last-compare-col{
+  margin-right: 0px;
+}
+.car-popup-container{
+  float: left;
+}
+.dropdown-container{
+  float: left;
+  width: 100%;
+  margin-bottom: 25px;
+}
+.compare-title,.cars-dropdown{
+  float: left;
+}
+.cars-dropdown{
+  margin-right: 15px;
+}
+.dropdowns-box{
+  float: right;
 }

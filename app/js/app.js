@@ -29,3 +29,11 @@ bitgrayApp.config(['$routeProvider', function($routeProvider){
       redirectTo: "/store"
     });
 }]);
+
+bitgrayApp.filter('removeSpaces', function () {
+        return function (text) {
+      
+      var str = text.replace(/\s+/g, '-');
+      return str;
+        };
+});
